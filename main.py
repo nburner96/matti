@@ -1,3 +1,4 @@
+import streamlit as st
 import fiona
 import rasterio
 import matplotlib.pyplot as plt
@@ -14,6 +15,7 @@ import time
 import concurrent.futures
 from functools import reduce
 import glob2
+from datetime import datetime
 
 
 def date_enter():
@@ -114,20 +116,26 @@ def gtiff_export(vi_array, affine, proj, date):
     outds = None
 
 def main():
-    rst = r"E:\Maturity Drone Images-Nathaniel\2023\2023 Orthomosaics\Area A\10-02-23 Area A_transparent_mosaic_group1.tif"
-    shp = r"C:\Users\nb47899\OneDrive - University of Georgia\Documents\#Li Lab\#Projects\Maturity\QGIS Projects\2023 Area A.shp"
-    output_name = "2023 Area A - GLI"
-    date = date_enter()
+    # Title
+    st.title("Matti")
 
-    t1 = time.perf_counter()
+    with st.form(key='my_form_to_submit'):
+        # File Upload
+        rst = st.file_uploader("Orthomosaic")
+        shp = st.file_uploader("Shapefile")
+        output_name = "2023 Area A - GLI"
+        date = st.date_input("Select a date")
 
+        submit_button = st.form_submit_button(label='Submit')
 
-    projection(rst, shp, False)
-    crop_to_shp(rst, shp)
-    zonal_stats("clip.tif", shp, date, output_name)
+    if submit_button:
+        t1 = time.perf_counter()
+        # projection(rst, shp, False)
+        # crop_to_shp(rst, shp)
+        # zonal_stats("clip.tif", shp, date, output_name)
 
-    t2 = time.perf_counter()
-    print(f'\nFinished in {round(t2 - t1, 2)} seconds')
+        t2 = time.perf_counter()
+        print(f'\nFinished in {round(t2 - t1, 2)} seconds')
 
 if __name__ == '__main__':
     main()
