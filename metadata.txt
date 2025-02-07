@@ -6,14 +6,14 @@
 name=Matti
 qgisMinimumVersion=3.0
 description=A plugin to estimate soybean maturity
-version=0.1
+version=1.0
 author=Nathaniel Burner
 email=nburner@uga.edu
 
-about=This plugin provides same day estimates of soybean maturity by identifying plots that are mature and estimating the date that they reached maturity.
+about=Matti provides an intuitive method for providing same day estimates of soybean maturity in breeding programs. Matti tracks the average green leaf index (GLI) of each plot during the senescence period. Regression models are used to monitor the senescence curve and provide maturity estimates when GLI values are near or below a user-specified threshold. Maturity estimates are added directly to the attribute table associated with the experiment/field shapefile. A summary graph will be displayed indicating the proportion of plots in each experiment rated as mature. This feature helps breeders better plan for note taking and harvest logistics.
 
-tracker=http://bugs
-repository=http://repo
+tracker=https://github.com/nburner96/matti/issues
+repository=https://github.com/nburner96/matti
 # End of mandatory metadata
 
 # Recommended items:
@@ -25,7 +25,7 @@ hasProcessingProvider=no
 # Tags are comma separated with spaces allowed
 tags=python
 
-homepage=http://homepage
+homepage=https://github.com/nburner96/matti
 category=Plugins
 icon=icon.png
 # experimental flag
@@ -37,7 +37,7 @@ deprecated=False
 # Since QGIS 3.8, a comma separated list of plugins to be installed
 # (or upgraded) can be specified.
 # Check the documentation for more information.
-# plugin_dependencies=
+# plugin_dependencies=https://github.com/chasmani/piecewise-regression
 
 Category of the plugin: Raster, Vector, Database or Web
 # category=
