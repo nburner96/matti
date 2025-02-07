@@ -13,11 +13,16 @@ pip.main(['install','piecewise-regression'])
 Matti itself available on the QGIS plugin repository. Navigate to *Plugins > Manage and Install Plugins... > All* and search for ```Matti``` 
 
 ## Tutorial
-### Rating Types
+### General Info
+
+
+
 Matti allows for two types of maturity ratings:
 
 *By Date:* Maturity estimates expressed as a date and days after a specified date (day zero). Typically used for advanced yield trials when a precise maturity estimate is desired.
 
 *By Date Block:* Maturity estimates expressed as groupings of dates after a specified date. This is used when a lower resolution of maturity ratings is desired, for example with early generation materials.
+
+
 
 
