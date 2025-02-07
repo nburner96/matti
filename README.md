@@ -3,3 +3,14 @@ Matti is a QGIS plugin that provides an intuitive method for providing same day 
 
 ## Citation
 Plugin icon created with BioRender.com
+
+# Installation
+Matti requires the Python package [piecewise-regression](https://github.com/chasmani/piecewise-regression). To install, navigate to *Plugins > Python Console* and type the folloiwng commands:
+```
+import pip
+pip.main(['install','piecewise-regression'])
+```
+Matti itself available on the QGIS plugin repository. Navigate to *Plugins > Manage and Install Plugins... > All* and search for ```Matti``` 
+
+
+
