@@ -3,7 +3,7 @@ Soybean maturity is an important trait but manual phenotyping is time-consuming 
 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/12861b64-9390-4487-bba8-2d72e4b03f75" height="300">
-  
+  <br>
   <em>Plugin icon created with BioRender.com</em>
 </p>
 
@@ -28,13 +28,33 @@ Matti itself available on the QGIS plugin repository. Navigate to ```Plugins > M
 
 ### When to fly
 
-Flights should capture the change in greenness during senescence of plots. For best results, begin flights no later than when the earliest maturing plots begin senescing. For By Date ratings, fly every 2-3 days. For By Date Block, fly at least once per week.
+Flights should capture the change in greenness during senescence of plots. For best results, begin flights no later than when the earliest maturing plots begin senescing. For By Date ratings, fly every 2-3 days. For By Date Block, fly at least once per week. The best time to fly is under uniform lighting conditions near solar noon.
 
 ### Workflow
-1. Create a shapefile for the experiment(s) of interest. Shapefiles for common serpentine plot layouts can be quickly generated with [SHP Buddy](https://github.com/nburner96/shp_buddy). For soybean fields, it is recommended to generate a field orthomosaic prior to full canopy coverage to ease shapefile alignment. Multiple shapefiles within the same field can be merged by going to ```Vector > Data Management Tools > Merge Vector Layers...```. Save to a ```.shp``` file. Select input layers and click ```Run```. 
-2. Load orthomosaic from most recent flight date into QGIS project
-3. Open Matti
+1. Create a shapefile for the experiment(s) of interest. Shapefiles for common serpentine plot layouts can be quickly generated with [SHP Buddy](https://github.com/nburner96/shp_buddy). For soybean fields, it is recommended to generate a field orthomosaic prior to full canopy coverage to ease shapefile alignment. Multiple shapefiles within the same field can be merged by going to ```Vector > Data Management Tools > Merge Vector Layers...```. Save to a ```.shp``` file. Select input layers and click ```Run```. It is also recommended to use ground control points to align orthomosaics from different flight dates.
 
+![image](https://github.com/user-attachments/assets/7edcf69c-7f3a-4e39-9a88-61bc83c7fdc7)
+<p align="center">
+  <em>Field with a shapefile colored by experiment</em>
+</p>
+
+
+3. Load orthomosaic from most recent flight date into QGIS project
+4. Open Matti by clicking the icon in the plugins bar
+
+### Matti
+![image](https://github.com/user-attachments/assets/c79a861d-674d-4bcc-884f-f2a82b89ce40)
+<p align="center">
+  <em>Matti dialog with By Date (left) and By Date Block (right) options</em>
+</p>
+
+1. Orthomosaic layer. Orthomosaics need to be run through Matti in chronological order.
+2. Shapefile layer
+3. Path corresponding to CSV file containing GLI timeseries data for each plot. Select file location and name if running for first time, Matti will automatically generate a file. Select file path for subsequent runs.
+4. Columns in shapefile attribute table corresponding to Experiment and Plot number. Each plot should have a unique Experiment x Plot number combination.
+5. Image date
+6. Date from which maturity estimates are expressed relative to. For example, if Aug 31 is specified, a Oct 5 estimated maturity date would be expressed as 35.
+7. 
 
 
 
