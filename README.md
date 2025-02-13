@@ -1,4 +1,4 @@
-# Matti - A QGIS plugin for estimating soybean maturity
+# Matti: A QGIS plugin for estimating soybean maturity
 Soybean maturity is an important trait but manual phenotyping is time-consuming and error prone. Matti is unique among other comparable solutions in that it provides maturity estimates on an ongoing basis as plots mature by tracking the average green leaf index (GLI) of each plot during the senescence period. Regression models are used to monitor the senescence curve and provide maturity estimates when GLI values are near or below a user-specified threshold. Maturity estimates are added directly to the attribute table associated with the experiment/field shapefile. A summary graph will be displayed indicating the proportion of plots in each experiment rated as mature. This feature helps breeders better plan for note taking and harvest logistics.
 
 <p align="center">
@@ -54,7 +54,11 @@ Flights should capture the change in greenness during senescence of plots. For b
 4. Columns in shapefile attribute table corresponding to Experiment and Plot number. Each plot should have a unique Experiment x Plot number combination.
 5. Image date
 6. Date from which maturity estimates are expressed relative to. For example, if Aug 31 is specified, a Oct 5 estimated maturity date would be expressed as 35.
-7. 
+7. First date of the first date block in the maturity schedule
+8. The days of the week corresponding to the start of new date blocks. ```Skip first break``` will skip the first occurrence of a break. This can be used to avoid date blocks with a small number of days at the beginning of the maturity schedule. This could happen if new date blocks begin on Sundays and Thursdays and the first day specified is on a Wednesday.
+9. Length of maturity schedule in months. Should be long enough to encompass at least the typical length of time between the earliest maturing lines beginning to senesce and the latest maturing lines reaching maturity.
+10. Preview of maturity schedule based on inputs
+11. Default GLI threshold is 0.01. 
 
 
 
