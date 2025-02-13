@@ -58,7 +58,13 @@ Flights should capture the change in greenness during senescence of plots. For b
 8. The days of the week corresponding to the start of new date blocks. ```Skip first break``` will skip the first occurrence of a break. This can be used to avoid date blocks with a small number of days at the beginning of the maturity schedule. This could happen if new date blocks begin on Sundays and Thursdays and the first day specified is on a Wednesday.
 9. Length of maturity schedule in months. Should be long enough to encompass at least the typical length of time between the earliest maturing lines beginning to senesce and the latest maturing lines reaching maturity.
 10. Preview of maturity schedule based on inputs
-11. Default GLI threshold is 0.01. 
+11. Default GLI threshold is 0.01. This value doesn't typically need to be changed, but can be if you wish to experiment
+12. Various options
+    - Last flight: check if it is the last flight of the season. Matti will try as best it can to give maturity estimates to all outstanding plots
+    - Record estimate dates: will add a column indicating the image date that resulted in a plot's maturity being estimated
+    - Keep GLI raster: check to prevent Matti from automatically deleting GLI raster
+    - Summary graph: after running, will display bar chart indicating proportion of plots in each experiment with maturity estimates. Useful for tracking maturity progression throughout breeding program
+13. Path to where you want Matti to store temporary files
 
 
 
