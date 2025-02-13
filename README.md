@@ -66,5 +66,10 @@ Flights should capture the change in greenness during senescence of plots. For b
     - Summary graph: after running, will display bar chart indicating proportion of plots in each experiment with maturity estimates. Useful for tracking maturity progression throughout breeding program
 13. Path to where you want Matti to store temporary files
 
+### Output
+After Matti finishes running, right-clicking the shapefile layer in the layers panel and selecting ```Open Attribute Table``` will display the maturity estimates made so far in the season.
 
+<p align="center">
+<img src="https://github.com/user-attachments/assets/8da06c69-afe7-4966-832a-a4da4220fdc0">
+</p>
 
